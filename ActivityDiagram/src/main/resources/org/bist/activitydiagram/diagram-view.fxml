@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bist.activitydiagram.HelloController">
+   <top>
+       <MenuBar BorderPane.alignment="CENTER">
+           <effect>
+               <Lighting diffuseConstant="1.56">
+                   <bumpInput>
+                       <Shadow>
+                           <color>
+                               <Color red="0.8552631735801697" green="0.1742202788591385" blue="0.1742202788591385" />
+                           </color>
+                       </Shadow>
+                   </bumpInput>
+                   <light>
+                       <Light.Distant>
+                           <color>
+                               <Color red="0.3157285451889038" green="0.9605262875556946" blue="0.573647677898407" />
+                           </color>
+                       </Light.Distant>
+                   </light>
+               </Lighting>
+           </effect>
+           <Menu mnemonicParsing="false" text="Файл">
+               <MenuItem mnemonicParsing="false" onAction="#openFile" text="Открыть файл" />
+            <MenuItem mnemonicParsing="false" onAction="#saveFile" text="Сохранить файл" />
+            <MenuItem mnemonicParsing="false" onAction="#screenshot" text="Скриншот диаграммы" />
+           </Menu>
+           <Menu mnemonicParsing="false" text="Правка">
+               <MenuItem mnemonicParsing="false" onAction="#clearAllElements" text="Очистить область" />
+           </Menu>
+           <Menu mnemonicParsing="false" text="Справка">
+               <MenuItem mnemonicParsing="false" text="О программе" onAction="#help" />
+           </Menu>
+       </MenuBar>
+   </top>
+   <left>
+       <ToolBar orientation="VERTICAL" prefHeight="375.0" prefWidth="92.0">
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor>
+           <effect>
+               <Lighting diffuseConstant="1.93" specularConstant="0.0" specularExponent="40.0" surfaceScale="0.34">
+                   <bumpInput>
+                       <Shadow />
+                   </bumpInput>
+                   <light>
+                       <Light.Distant>
+                           <color>
+                               <Color red="0.527999997138977" green="0.6989025473594666" blue="0.9599999785423279" />
+                           </color>
+                       </Light.Distant>
+                   </light>
+               </Lighting>
+           </effect>
+           <SplitMenuButton mnemonicParsing="false" text="Разделы">
+               <items>
+                   <MenuItem mnemonicParsing="false" onAction="#initDivides" text="Добавить раздел" />
+                   <MenuItem mnemonicParsing="false" onAction="#deleteDivide" text="Удалить раздел" />
+               </items>
+              <effect>
+                  <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="6.51" surfaceScale="2.9">
+                      <bumpInput>
+                          <Shadow />
+                      </bumpInput>
+                      <light>
+                          <Light.Distant>
+                              <color>
+                                  <Color red="0.18518517911434174" green="0.6333333253860474" blue="1.0" />
+                              </color>
+                          </Light.Distant>
+                      </light>
+                  </Lighting>
+              </effect>
+           </SplitMenuButton>
+           <SplitMenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" text="Элементы">
+               <items>
+                   <MenuItem mnemonicParsing="false" onAction="#addStartElement" text="Начальное состояние" />
+                   <MenuItem mnemonicParsing="false" onAction="#addEndElement" text="Конечное состояние" />
+                   <MenuItem mnemonicParsing="false" onAction="#addActionElement" text="Действие" />
+                   <MenuItem mnemonicParsing="false" onAction="#addBranchElement" text="Ветвление" />
+                   <MenuItem mnemonicParsing="false" onAction="#addSynchronizeElement" text="Синхронизация" />
+                   <MenuItem mnemonicParsing="false" onAction="#addStateElement" text="Состояние" />
+                   <MenuItem mnemonicParsing="false" onAction="#addTextElement" text="Текст" />
+               </items>
+              <effect>
+                  <Lighting diffuseConstant="2.0" specularConstant="0.44" specularExponent="6.97" surfaceScale="2.55">
+                      <bumpInput>
+                          <Shadow />
+                      </bumpInput>
+                      <light>
+                          <Light.Distant>
+                              <color>
+                                  <Color red="0.4135599434375763" green="0.9605262875556946" blue="0.5138370990753174" />
+                              </color>
+                          </Light.Distant>
+                      </light>
+                  </Lighting>
+              </effect>
+           </SplitMenuButton>
+       </ToolBar>
+   </left>
+   <center>
+      <Pane fx:id="diagram" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

@@ -9,10 +9,13 @@
 
 **Скриншот рабочего окна приложения**:
 
+![](https://github.com/AndreyBaryshev1/ActivityDiagramEditor/blob/main/s.jpg)
 
 ## Зависимости
 
 **Диаграмма классов**:
+
+![](https://github.com/AndreyBaryshev1/ActivityDiagramEditor/blob/main/d.png)
 
 В activitydiagram пакет входят классы, которые отвечают за работу пользовательского интерфейса, инициализацию действий в программе.
 
